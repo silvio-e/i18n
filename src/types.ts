@@ -1,4 +1,4 @@
-import type { Locale, I18nOptions } from 'vue-i18n'
+import type { Locale, I18nOptions, FallbackLocale } from 'vue-i18n'
 import type { ParsedPath } from 'path'
 import type { PluginOptions } from '@intlify/unplugin-vue-i18n'
 import type { NuxtPage } from '@nuxt/schema'
@@ -153,6 +153,14 @@ export type NuxtI18nOptions<
    * @defaultValue []
    */
   locales?: ConfiguredLocaleType
+  /**
+   * Fallback localization
+   *
+   * @remarks
+   * Can be following: string | string[] | false | { [locale: string]: string[] }
+   *
+   */
+  fallbackLocale?: FallbackLocale,
   /**
    * Routes strategy
    *
